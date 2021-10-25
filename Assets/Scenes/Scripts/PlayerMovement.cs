@@ -5,20 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
+    [SerializeField] float strength;
+    [SerializeField] Rigidbody dragonRigidBody;
 
 
-
-
+    public bool alive = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        movementSpeed = 20f;
-
-
-
-
+        movementSpeed = 99f;
 
     }
 
@@ -26,26 +23,37 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
+        playerPhysicsMovement();
 
 
 
-        /*
-        //RESTRICCIÓN DE MOVIMIENTO HORIZONTAL
-        //store the transform.position of your car in a new Vector3, i called it "pos"
-        Vector3 pos = transform.position;
-
-        //then access the x value and clamp it
-        pos.x = Mathf.Clamp(pos.x, -maxX, maxX);
-
-        //and don't forget to turn the new "pos" into the transform.position of your car
-        transform.position = pos;
-        */
 
     }
+
+    
+    void playerPhysicsMovement()
+    {
+        float desplH = Input.GetAxis("Horizontal");
+        dragonRigidBody.AddForce(Vector3.right * desplH * strength);
+        dragonRigidBody = GetComponent<Rigidbody>();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 3000);
+
+        }
+
+
+
+
+
+    }
+    /*
+    //MOVIMIENTO DE LA NAVE
+
     void MovePlayer()
     {
-        //MOVIMIENTO DE LA NAVE
-
         //displacement es el input; por ello hay que incluirlo como factor en el vector3
 
         float displacementInX = Input.GetAxis("Horizontal");
@@ -55,5 +63,8 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector3.up * displacementInY * movementSpeed * Time.deltaTime);
 
     }
+    */
+
+
 }
     
