@@ -369,6 +369,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6082492014120475416, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082492014120475416, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082492014120475416, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082492014120475416, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 8937138653918211583, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -443,6 +459,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
+--- !u!1 &1479205122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9069824707209879279, guid: 30c6fe85cea495e4f93648fdf4dfa5b5, type: 3}
+  m_PrefabInstance: {fileID: 1465937444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1479205125
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479205122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.5041332
+  m_Height: 26.249664
+  m_Direction: 2
+  m_Center: {x: -0, y: 1.79, z: -0}
 --- !u!1 &1787425882
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castle: {fileID: 5736876685437674624, guid: 63bafcbb4f18ed74c8eddffad89e6623, type: 3}
   initialPosition: {fileID: 1787425884}
+  instantiatePosition: {fileID: 1787425884}
   speed: 100
 --- !u!4 &1787425884
 Transform:
@@ -483,7 +519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787425882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 103.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

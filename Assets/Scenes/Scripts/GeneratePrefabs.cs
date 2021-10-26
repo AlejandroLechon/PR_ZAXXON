@@ -8,64 +8,49 @@ public class GeneratePrefabs : MonoBehaviour
 
     [SerializeField] GameObject castle;
     [SerializeField] Transform initialPosition;
+    [SerializeField] Transform instantiatePosition;
+
     [SerializeField] float speed;
-    Vector3 destinationPosition;
 
     void Start()
     {
+        /*
         speed = 10f;
-        castle = GameObject.Find("Castle");
-        initialPosition = castle.GetComponent<castle>();
+        castle = GameObject.Find("castle");
+        //initialPosition = castle.GetComponent<Transform>();
+        */
 
-
-
-        /*
-        for (int n = 0; n < 10; n++)
-        {
-            int y = 0;
-            Vector3 changePosition = new Vector3(y, 0f, 0f);
-            destinationPosition = initialPosition.position + changePosition;  
-            Instantiate(castle, destinationPosition, Quaternion.identity);
-            y += 2;
-
-        }
-        /*
         StartCoroutine("GenerateCastle");
       
-        //CONDICIONES DE INSTANCIACIÓN DE LOS PREFABS 
-        Vector3 destinationPosition = initialPosition.position;
-        Vector3 despl = new Vector3(desplX, 0, 0);
-
-        for (int n = 0; n < 8; n++)
-        {
-
-            Instantiate(castle, destinationPosition, Quaternion.identity);
-            destinationPosition = destinationPosition + despl;
-
-        }
-        */
+       
     }
     // Update is called once per frame
     void Update()
     {
-      //speed = castle.speed;
-      transform.Translate(Vector3.back * Time.deltaTime * speed);
+        
     }
-    /*
     //CORRUTINA DE INSTANCIACIÓN
-    IEnumerator Generate()
+    IEnumerator GenerateCastle()
 
     {
         while (true)
         {
+            //Quaternion para girar el prefab que aparece tumbado por defecto
+            castle.transform.rotation = Quaternion.AngleAxis(-90f,Vector3.right);
+            
+
+
+            //Instanciador de prefabs restringido
             float randomX = Random.Range(-40f, 40f);
-            Vector3 newPos = new Vector3(randomX, instantiatePosition.position.y, instantiatePosition.position.z);
+            Vector3 newPos = new Vector3(randomX, 17.5f, instantiatePosition.position.z);
             Instantiate(castle, newPos, Quaternion.identity);
 
-            yield return new WaitForSeconds(countdown);
+            
+            yield return new WaitForSeconds(2);
+
         }
     }
-    */
+    
 
 
 }

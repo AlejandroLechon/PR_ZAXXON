@@ -10,6 +10,7 @@ public class InstantiateTerrain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         InstantiateLand();
 
     }

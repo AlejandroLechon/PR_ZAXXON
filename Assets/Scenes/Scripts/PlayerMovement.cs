@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float movementSpeed;
+    public bool alive = true;
     [SerializeField] float strength;
     [SerializeField] Rigidbody dragonRigidBody;
+    //Vamos a relaizar el movimiento por físicas por lo tanto le damos un rigidbody al Player
 
-
-    public bool alive = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        movementSpeed = 99f;
-
+        
     }
 
     // Update is called once per frame
@@ -25,45 +23,30 @@ public class PlayerMovement : MonoBehaviour
 
         playerPhysicsMovement();
 
-
-
-
     }
 
-    
+    //Creamos este método para el movimiento del player
+    //Como vemos nos permitirá desplazarlo en horizontal y subirlo en vertical
+    //Queremos que la caída no sea controlada por el jugador para que tenga que calcular:
+    //la distancia, el tiempo de caída, y la velocidad de los prefabs.
     void playerPhysicsMovement()
     {
         float desplH = Input.GetAxis("Horizontal");
         dragonRigidBody.AddForce(Vector3.right * desplH * strength);
         dragonRigidBody = GetComponent<Rigidbody>();
 
+        // Salto o "aleteo"
         if (Input.GetKeyDown(KeyCode.Space))
 
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 3000);
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 4000);
 
         }
 
 
 
-
-
     }
-    /*
-    //MOVIMIENTO DE LA NAVE
-
-    void MovePlayer()
-    {
-        //displacement es el input; por ello hay que incluirlo como factor en el vector3
-
-        float displacementInX = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * displacementInX * movementSpeed * Time.deltaTime);
-
-        float displacementInY = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.up * displacementInY * movementSpeed * Time.deltaTime);
-
-    }
-    */
+   
 
 
 }
