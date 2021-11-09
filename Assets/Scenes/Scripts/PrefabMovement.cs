@@ -5,14 +5,13 @@ using UnityEngine;
 public class PrefabMovement : MonoBehaviour
 {
     [SerializeField] float prefabSpeed;
-    [SerializeField] GameObject castle;
+    [SerializeField] public GameObject[] scenePrefabs;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        prefabSpeed = 90f;
-        StartCoroutine("destroyPrefabs");
-
+        prefabSpeed = 80f;
     }
 
     // Update is called once per frame
@@ -22,17 +21,15 @@ public class PrefabMovement : MonoBehaviour
 
         transform.Translate(Vector3.back* prefabSpeed * Time.deltaTime);
 
-    }
-    IEnumerator destroyPrefabs()
-    {
-        //destrucción de prefabs traspasados
-        if (castle.transform.position.z <= -1)
-        {
-            Destroy(castle);
-        }
-        yield return new WaitForSeconds(1);
+        //Destrucción de los prefabs traspasados
+        float posZ = transform.position.z;
 
+        if (posZ <= -100)
+        {
+            Destroy(this.gameObject);
+        }
     }
+   
 
 
 

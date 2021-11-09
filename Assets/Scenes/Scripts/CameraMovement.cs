@@ -7,7 +7,6 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] Transform playerPosition;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +16,13 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = playerPosition.position;
+        
+        
+       transform.position = playerPosition.position;
 
-        transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y + 12, playerPosition.position.z - 20);
+       transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y + 20, playerPosition.position.z - 25);
+
+       
 
 
     }

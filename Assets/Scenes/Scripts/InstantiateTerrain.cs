@@ -5,27 +5,67 @@ using UnityEngine;
 public class InstantiateTerrain : MonoBehaviour
 {
     [SerializeField] GameObject Land;
+    [SerializeField] float landSpeed;
+    [SerializeField] Transform initialPosition;
+    [SerializeField] Transform instantiatePosition;
+    public float terrainScale = 0.68f;
+
+    public bool alive;
+    private PlayerMovement playerMovement;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        InstantiateLand();
+        landSpeed = 20f;
+       Instantiate(Land);
+
+
+        //StartCoroutine("InstantiateLand");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
+        
     }
-    void InstantiateLand()
+
+    IEnumerator InstantiateLand()
+
     {
-        Instantiate(Land);
+        while (alive == true)
+        {
+
+            // Instanciador de terreno 
+
+            //Instantiate(Land, new Vector3(0f, 0f, -1 * Time.deltaTime * landSpeed* terrainScale), Quaternion.identity);
+            Instantiate(Land, new Vector3(0f, 0f, 0f), Quaternion.identity);
+
+            //Movimiento dirección -z del terreno
+            //transform.Translate(Vector3.back * Time.deltaTime * landSpeed);
+
+            //Destrucción de los terrenos traspasados
+            float posZ = transform.position.z;
+
+            if (posZ <= -100)
+            {
+                Destroy(this.gameObject);
+            }
+
+            //retorno de la corrutina
+            
+             yield return new WaitForSeconds(2f);
+
+           
+        }
     }
+
 }
+
+
+
 
 
 
