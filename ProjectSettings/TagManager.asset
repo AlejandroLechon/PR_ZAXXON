@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Prefab
+  - Terrain
   layers:
   - Default
   - TransparentFX
