@@ -45,11 +45,11 @@ public class GeneratePrefabs : MonoBehaviour
             //instanciación aleatoria de prefabs por array 
             int randomNumber = Random.Range(0, scenePrefabs.Length);
 
-            Vector3 newPos = new Vector3(randomX, 0, 300);
+            Vector3 newPos = new Vector3(randomX, 0, 500);
             
             Instantiate(scenePrefabs[randomNumber], newPos, Quaternion.identity);
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.6f);
            
            
         }
