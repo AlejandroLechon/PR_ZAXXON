@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UserINterfaceButtons : MonoBehaviour
 {
+        [SerializeField] SliderJoint2D VolumeSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class UserINterfaceButtons : MonoBehaviour
     }
     public void LoadGameScene()
     {
-
+        GameManager.lives = 3;
         SceneManager.LoadScene(1);
     }
 
@@ -41,4 +42,20 @@ public class UserINterfaceButtons : MonoBehaviour
 
         SceneManager.LoadScene(3);
     }
+    /*
+   public void VolumeSlider()
+    {
+        GameManager.musicVolume;
+
+        musicVolume = GameObject.Find("Canvas").GetComponent<AudioSource>();
+
+        
+    }
+  
+    public void setVolume()
+    {
+        musicVolume.volume = volumeSlider.value;
+    }
+    */
+
 }

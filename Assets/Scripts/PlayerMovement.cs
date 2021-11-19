@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Vidas
+    
     public static int lives;
 
     //Rigidbody al Player.Movimiento por físicas.
@@ -32,7 +33,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //Le damos el valor true a alive, comienza el juego
         alive = true;
-        lives = 3;
+        GameManager.lives = 3;
+
+        print(GameManager.lives);
+
        
     }
 
@@ -44,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (alive == true)
         {
             playerPhysicsMovement();
-            dragonSpeed += 0.0001f;
+            dragonSpeed += 0.00001f;
 
         }
     }
@@ -63,16 +67,17 @@ public class PlayerMovement : MonoBehaviour
         //movimiento lateral según fuerzas
         dragonRigidBody.AddForce(Vector3.right * desplH * strength* dragonSpeed);
         dragonRigidBody = GetComponent<Rigidbody>();
+
             
         //movimiento vertical restingido y según fuerzas 
-       
         if ((transform.position.y >= -verticalLimit ) && (transform.position.y <= verticalLimit))
 
-            // Salto o "aleteo"
-            if (Input.GetKeyDown(KeyCode.Space))
+
+        // Salto o "aleteo"
+        if (Input.GetKeyDown(KeyCode.Space))
 
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 4000);
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 3000);
 
         }
      

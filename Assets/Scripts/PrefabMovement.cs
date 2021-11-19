@@ -10,7 +10,7 @@ public class PrefabMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prefabSpeed = 80f;
+        prefabSpeed = 100f;
     }
 
     // Update is called once per frame
