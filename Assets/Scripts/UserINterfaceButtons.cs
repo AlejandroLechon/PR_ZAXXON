@@ -1,11 +1,17 @@
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class UserINterfaceButtons : MonoBehaviour
 {
-        [SerializeField] SliderJoint2D VolumeSlider;
+    //variable para el slider de la música
+        [SerializeField] Slider VolumeSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -42,10 +48,15 @@ public class UserINterfaceButtons : MonoBehaviour
 
         SceneManager.LoadScene(3);
     }
-    /*
+
+
+
+    //Volumen = slider del volumen
+    
+     /*
    public void VolumeSlider()
     {
-        GameManager.musicVolume;
+        GameManager.musicVolume = musicVolume.value;
 
         musicVolume = GameObject.Find("Canvas").GetComponent<AudioSource>();
 
@@ -56,6 +67,6 @@ public class UserINterfaceButtons : MonoBehaviour
     {
         musicVolume.volume = volumeSlider.value;
     }
+    
     */
-
 }

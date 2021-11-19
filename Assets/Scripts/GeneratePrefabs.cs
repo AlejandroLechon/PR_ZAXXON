@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GeneratePrefabs : MonoBehaviour
 {
-    // Start is called before the first frame update
-    
+    //posición de instanciación
     [SerializeField] Transform initialPosition;
 
 
@@ -17,9 +16,7 @@ public class GeneratePrefabs : MonoBehaviour
     {
        StartCoroutine("GenerateAllPrefabs");
 
-
     }
-    // Update is called once per frame
     void Update()
     {
 
@@ -37,7 +34,6 @@ public class GeneratePrefabs : MonoBehaviour
     {
         while (true)
         {
-            
 
             //Instanciador de prefabs restringido
             float randomX = Random.Range(-80f, 80f);

@@ -6,61 +6,53 @@ using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
-    public static int lives;
+    //Variables del Player
+    public static int lives; // Contador vidas
+
     [SerializeField] GameObject Player;
-    private PlayerMovement playerMovement;
 
     //sprites vidas
     [SerializeField] Image livesImage;
     [SerializeField] Sprite[] livesSprite;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
+        lives = 3; // Igualamos las vidas a 3.
+
+        livesImage = GameObject.Find("LivesImage").GetComponent<Image>(); // Cogemos el valor de la imagen y le decimos que es el objeto LivesImage,
+        //dentro del cual cogemos el componente Image.
+
       
-      int lives = GameManager.lives;
-     
-      //Con esta línea tenemos las vidas asociadas con los sprites
-      livesImage.sprite = livesSprite[lives];
       
       print(lives);
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
+        Die();
     }
-    public class ConfigVars : MonoBehaviour
+
+    void OnTriggerEnter(Collider other)
     {
-        void Die()
+        if(other.tag == "Prefab") // Si me choco con un prefab, quítame una vida.
         {
-            if (lives == 0)
-            {
-                Die();
-            }
-        }
-
-        void OnTriggerEnter(Collider other)
-        {
-            {
-                print(PlayerMovement.lives);
-                print(other.tag);
-                if (other.tag == "Prefab")
-                {
-                    GameManager.lives--;
-                    
-                }
-                print(lives);
-               
-            }
-
+            lives--; // Restamos una vida.
+            livesImage.sprite = livesSprite[lives]; // Cambiamos el valor de la imagen a lo que valga las vidas.
+            print(lives);
         }
     }
+
+    public void Die() // METODO DIE>>START
+    {
+        if (lives <= 0) //si mis vidas llegan a 0, llévame a start
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+
  
      
     

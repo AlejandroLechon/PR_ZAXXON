@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PrefabMovement : MonoBehaviour
 {
+    //Velocidad de los prefabs
     [SerializeField] float prefabSpeed;
-
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,6 @@ public class PrefabMovement : MonoBehaviour
     void Update()
     {
         //Movimiento dirección -z de los prefabs
-
         transform.Translate(Vector3.back* prefabSpeed * Time.deltaTime);
 
         //Destrucción de los prefabs traspasados

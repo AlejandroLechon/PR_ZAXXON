@@ -10,6 +10,9 @@ public class LightManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Este script está destinado a crear un ciclo de día y noche 
+        //controlando la Transformación de mi luz principal de la escena
+        
        // StartCoroutine("Hours");
         //mydirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timeOfDay * 360), -90, -170));
 

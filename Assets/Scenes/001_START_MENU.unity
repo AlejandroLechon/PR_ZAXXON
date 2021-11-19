@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72af45c325744c448bdb259bc19e88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VolumeSlider: {fileID: 0}
 --- !u!4 &573169973
 Transform:
   m_ObjectHideFlags: 0
@@ -433,7 +434,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -6308095303729898612, guid: 2530afa404f32874d94602324f9ff332, type: 3}
     m_PressedSprite: {fileID: -6308095303729898612, guid: 2530afa404f32874d94602324f9ff332, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -6308095303729898612, guid: 2530afa404f32874d94602324f9ff332, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -888,7 +889,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -6146128501904118651, guid: 2530afa404f32874d94602324f9ff332, type: 3}
     m_PressedSprite: {fileID: -6146128501904118651, guid: 2530afa404f32874d94602324f9ff332, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -6146128501904118651, guid: 2530afa404f32874d94602324f9ff332, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
