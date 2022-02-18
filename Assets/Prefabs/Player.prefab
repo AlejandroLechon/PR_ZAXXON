@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a3c98d693a28747937068acc770bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 0
   Player: {fileID: 9069824707209879279}
   livesImage: {fileID: 0}
   livesSprite:
@@ -112,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 4102684536469477255, guid: 5c819a5bc76112e4c91afb9b3191de06, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d045f57a3fe72244cb05b8160ec65f12, type: 2}
+      objectReference: {fileID: 2100000, guid: 6187b4aec270a1940b1c8c1e8cb2732a, type: 2}
     - target: {fileID: 6172800186075649719, guid: 5c819a5bc76112e4c91afb9b3191de06, type: 3}
       propertyPath: m_RootOrder
       value: 0
