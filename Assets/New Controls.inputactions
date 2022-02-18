@@ -1,0 +1,79 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "c921d6c3-3701-40d5-8308-546a4caf4d95",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "bca09919-ed0c-4967-bc5e-514e246a2b66",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Fly",
+                    "type": "Button",
+                    "id": "518c4f8d-0cbc-4fc2-a664-9440d84ad9d1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0092cc83-e3cf-4118-932f-c029d4203b50",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a57b79c8-1df6-4193-905d-e012c9adb4b4",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fly",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Shoot",
+            "id": "7e84fd93-abad-4e4e-8478-59ada7fbbb25",
+            "actions": [
+                {
+                    "name": "FireBreath",
+                    "type": "Button",
+                    "id": "d56fb5f2-3b95-423d-b715-87ad4b841dd5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8986c7a5-1b5a-45cd-a1bc-56dedc06b716",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireBreath",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
