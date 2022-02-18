@@ -22,8 +22,7 @@ public class PlayerMovement : MonoBehaviour
     //Velocidad
     public float dragonSpeed = 0.2f;
 
-    //Fireball
-    [SerializeField] GameObject fireball;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
        // GameManager.lives = 3;
 
-       print("Comienza el juego");
+       print("Tercero");
 
     }
 
@@ -75,19 +74,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
 
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 3200);
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 3000);
 
         }
      
 
     }
 
-    /*
-    public void Shoot()
-    {
-        Instantiate<>(fireball)(transform.Translate.forward);
-        
-    }
-    */
 
 }
