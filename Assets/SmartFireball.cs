@@ -8,6 +8,7 @@ public class SmartFireball : MonoBehaviour
     {
         Debug.Log(other);
         Destroy(gameObject);
+        Destroy(other.gameObject);
 
     }
 }

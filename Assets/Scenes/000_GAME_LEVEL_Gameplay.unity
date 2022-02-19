@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 7.47, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 5.93, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -463,10 +463,10 @@ MonoBehaviour:
   m_VerticalDamping: 0
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.48
-  m_SoftZoneHeight: 0.53
+  m_DeadZoneWidth: 0.188
+  m_DeadZoneHeight: 0.341
+  m_SoftZoneWidth: 0.546
+  m_SoftZoneHeight: 0.704
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -807,7 +807,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341138171}
-  m_LocalRotation: {x: 0.1804472, y: 0, z: 0, w: 0.9835847}
+  m_LocalRotation: {x: 0.2001515, y: 0.00000001884805, z: -0.0000000038503782, w: 0.979765}
   m_LocalPosition: {x: 0, y: 26, z: -33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -836,7 +836,7 @@ AudioSource:
   m_GameObject: {fileID: 1341138171}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4474129609245692017, guid: ca25a21631c374844bd8bd5e60d24086, type: 2}
   m_audioClip: {fileID: 8300000, guid: 75b7be6669371074ba301d8f829057b2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
@@ -932,7 +932,7 @@ AudioSource:
   m_GameObject: {fileID: 1341138171}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6741995739570932973, guid: ca25a21631c374844bd8bd5e60d24086, type: 2}
   m_audioClip: {fileID: 8300000, guid: 182df7696ebd7284f84e09cf32edd6a0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72af45c325744c448bdb259bc19e88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VolumeSlider: {fileID: 0}
+  VolumeSlider: {fileID: 1567857740}
 --- !u!4 &1669611017
 Transform:
   m_ObjectHideFlags: 0
@@ -1627,7 +1627,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983334741}
-  m_LocalRotation: {x: 0.1804472, y: 0, z: 0, w: 0.9835847}
+  m_LocalRotation: {x: 0.2001515, y: 0.00000001884805, z: -0.0000000038503782, w: 0.979765}
   m_LocalPosition: {x: 0, y: 26, z: -33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1657,7 +1657,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
