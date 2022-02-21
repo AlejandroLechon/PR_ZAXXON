@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AnimatedTexture : MonoBehaviour
 {
-    [SerializeField] Material ground;
-    [SerializeField] float speed;
 
     void Start()
     {
@@ -14,7 +12,6 @@ public class AnimatedTexture : MonoBehaviour
 
     void Update()
     {
-        //ground.SetFloat("referencedelgrapheditor", speed);
 
     }
 }
